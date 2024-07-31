@@ -1,0 +1,33 @@
+{
+    "paths": {
+        "data": "./data",
+        "model": "./models",
+        "save_reports": true
+    },
+
+    "clients": {
+        "total": 40,
+        "per_round": 5,
+        "do_test": false,
+        "label_distribution": "uniform"
+    },
+
+    "data": {
+        "loading": "static",
+        "partition": {
+            "size": 100
+        },
+        "IID": true
+    },
+
+    "federated_learning": {
+        "rounds": 50,
+        "clients_task": "train",
+        "epochs": 5,
+        "batch_size": 32
+    },
+
+    "model": "MNIST",
+
+    "server": "basic"
+}

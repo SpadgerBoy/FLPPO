@@ -1,0 +1,37 @@
+{
+    "paths": {
+        "data": "./data",
+        "model": "./models",
+        "save_reports": true
+    },
+
+    "clients": {
+        "total": 40,
+        "per_round": 5,
+        "do_test": false,
+        "label_distribution": "uniform"
+    },
+
+    "data": {
+        "loading": "static",
+        "partition": {
+            "size": 100
+        },
+        "IID": false,
+        "bias": {
+            "primary": [0.1,0.4,0.7,1],
+            "secondary": false
+        }
+    },
+
+    "federated_learning": {
+        "rounds": 10,
+        "target_accuracy": 0.99,
+        "epochs": 5,
+        "batch_size": 32
+    },
+
+    "model": "MNIST",
+
+    "server": "ppo"
+}
